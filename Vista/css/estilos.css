@@ -1,0 +1,90 @@
+body {
+    background-color: #dfdfdf;
+}
+
+#contenedor {
+    font-size: 1em;
+    background-color: #ffffff;
+    border: #e3e3e3 1px solid;
+    text-align: justify;
+    margin: 10px auto;
+    width: 900px;
+}
+
+#encabezado {
+    width: 900px;
+    height: 250px;
+    background: url('../img/auto.jpeg') no-repeat;
+    background-size: cover;
+
+    background-position: center;
+
+    border: #d3d3d3 1px solid;
+}
+
+
+#encabezado h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #d2cccc;
+    margin-left: 660px;
+
+}
+
+#contenido {
+    border: #d3d3d3 1px solid;
+    margin: 20px 20px 10px;
+    padding: 10px 15px;
+}
+
+#contenido h2 {
+    color: #555749;
+    border-bottom: #CFBFB5 1px solid;
+}
+
+#menu {
+    float: left;
+    width: 120px;
+}
+
+div#contenido {
+    border: #d3d3d3 1px solid;
+    margin: 20px 20px 10px 180px;
+    padding: 10px 15px;
+}
+
+#menu {
+    float: left;
+    width: 120px;
+    background-color: #CFCEC6;
+}
+
+#menu li {
+    border: #CFCEC6 3px solid;
+    background-color: #908E81;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 30px;
+}
+
+#menu a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+#menu li:hover {
+    background-color: #7092be;
+}
+
+#menu li:activa,
+#menu li:hover {
+    background-color: #7092be;
+}
+
+.horaSelect {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
