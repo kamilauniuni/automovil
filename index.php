@@ -18,7 +18,7 @@ if (isset($_GET["accion"])) {
             $_POST["autPlaca"],
             $_POST["autMarca"],
             $_POST["autModelo"],
-            $_POST["autColor"]
+            $_POST["autColor"],
         );
     } elseif ($_GET["accion"] == "verAuto") {
         if (isset($_GET["placa"])) {
@@ -41,13 +41,18 @@ if (isset($_GET["accion"])) {
     } elseif ($_GET["accion"] == "confirmarCancelar") {
         $controlador->confirmarCancelarAuto($_GET["placa"]);
     } elseif ($_GET["accion"] == "manejarSolicitudEdicionAuto") {
-        if (isset($_GET["placa"])) {
-            $controlador->actualizarAuto($_GET["placa"]);
+        if (isset($_GET["placa"])) { 
+            $placa = isset($_GET["placa"]) ? $_GET["placa"] : "";
+            $marca = isset($_POST["marca"]) ? $_POST["marca"] : "";
+            $modelo = isset($_POST["modelo"]) ? $_POST["modelo"] : "";
+            $color = isset($_POST["color"]) ? $_POST["color"] : "";
+        
+            $controlador->actualizarAuto($placa, $marca, $modelo, $color);
         } else {
             echo "La placa para editar no está definida.";
         }
     } else {
-        $controlador->verPagina('Vista/html/inicio.php');
+        echo "Se esperaba una solicitud para editar el auto.";
     }
 } else {
     $controlador->verPagina('Vista/html/inicio.php');

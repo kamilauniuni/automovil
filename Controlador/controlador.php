@@ -68,13 +68,8 @@ class Controlador
 
    
 
-    public function actualizarAuto($placa) 
-    {
+    public function actualizarAuto($placa, $marca, $modelo, $color) {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $marca = $_POST["marca"];
-            $modelo = $_POST["modelo"];
-            $color = $_POST["color"];
-            
             $autoActualizado = new Auto($placa, $marca, $modelo, $color);
             
             $gestorAuto = new GestorAuto();
@@ -85,13 +80,12 @@ class Controlador
                 echo "El auto ha sido actualizado exitosamente.";
             } else {
                 echo "Error al actualizar el auto.";
-                
             }
         } else {
-           
             $this->mostrarFormularioEdicion($placa);
         }
     }
+    
     
 
     private function mostrarFormularioEdicion($placa)

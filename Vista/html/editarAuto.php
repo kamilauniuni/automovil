@@ -17,7 +17,9 @@
             <li><a href="index.php?accion=consultar">Consultar Auto</a></li>
         </ul>
         <div id="contenido">
-        <form  id="editarAuto" action="index.php?accion=manejarSolicitudEdicionAuto" method="post">
+        <form id="editarAuto" action="index.php?accion=manejarSolicitudEdicionAuto&placa=<?php echo $_GET['placa']; ?>" method="post">
+
+
 
             <label for="placa">Placa:</label>
            <input type="text" id="placa" name="placa" value="<?php echo isset($placa) ? $placa : ''; ?>" readonly><br><br>
@@ -30,6 +32,8 @@
 
          <label for="color">Color:</label>
          <input type="text" id="color" name="color" value="<?php echo isset($color) ? $color : ''; ?>"><br><br>
+
+         
 
     <input type="submit" value="Guardar">
         </form>
