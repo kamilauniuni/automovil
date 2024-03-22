@@ -11,7 +11,7 @@
 <body>
     <div id="contenedor">
         <div id="encabezado">
-            <h1>Automovil</h1>
+            <h2>Consulta </h2>
         </div>
         <ul id="menu">
             <li><a href="index.php">Inicio</a></li>

@@ -41,11 +41,10 @@ class GestorAuto
     {
         $conexion = new Conexion();
         $conexion->abrir();
-        $sql = "UPDATE automovil SET autPlaca = 'Cancelado' . 
-        WHERE autPlaca = '$pla'";
-
+        $sql = "UPDATE automovil SET autPlaca = 'Cancelado' WHERE autPlaca = '$pla'";
+    
         $conexion->consulta($sql);
-        $filasAfectadas = $conexion->obtenerResult();
+        $filasAfectadas = $conexion->obtenerFilasAfectadas(); 
         $conexion->cerrar();
         return $filasAfectadas;
     }

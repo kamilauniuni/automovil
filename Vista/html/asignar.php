@@ -13,7 +13,7 @@
 <body>
     <div id="contenedor">
         <div id="encabezado">
-            <h1>Automóviles</h1>
+            <h2>Ingresar Auto </h2>
         </div>
         <ul id="menu">
             <li><a href="index.php">Inicio</a></li>

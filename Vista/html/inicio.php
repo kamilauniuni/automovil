@@ -9,7 +9,7 @@
 <body>
     <div id="contenedor">
         <div id="encabezado">
-            <h1> Accelerate Auto </h1>
+        <h2>Automovil</h2>
         </div>
         <ul id="menu">
             <li><a href="index.php">inicio</a> </li>

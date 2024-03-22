@@ -51,11 +51,7 @@ function consultarAutomovil() {
 
 
 
-function cancelarAuto(placa) {
-    if (confirm("¿Estás seguro de que deseas cancelar este automóvil?")) {
-        window.location.href = "index.php?accion=cancelarAutomovil&placa=" + placa;
-    }
-}
+
 
 
 function cancelarAuto(placa) {
@@ -63,6 +59,7 @@ function cancelarAuto(placa) {
         window.location.href = "index.php?accion=cancelarAutomovil&placa=" + placa;
     }
 }
+
 
 
 function confirmarEliminar(placa) {

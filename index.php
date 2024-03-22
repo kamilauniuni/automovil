@@ -34,12 +34,17 @@ if (isset($_GET["accion"])) {
         }
     } elseif ($_GET["accion"] == "consultarAuto") {
         if (isset($_GET["consultarPlaca"])) {
+            
             $controlador->consultarAuto($_GET["consultarPlaca"]);
         } else {
             echo "La placa a consultar no está definida.";
         }
     } elseif ($_GET["accion"] == "confirmarCancelar") {
-        $controlador->confirmarCancelarAuto($_GET["placa"]);
+        if (isset($_GET["cancelarPlaca"])) {
+        $controlador->confirmarCancelarAuto($_GET["cancelarPlaca"]);
+    } else {
+        echo "La placa a cancelar no está definida.";
+    }
     } elseif ($_GET["accion"] == "manejarSolicitudEdicionAuto") {
         if (isset($_GET["placa"])) { 
             $placa = isset($_GET["placa"]) ? $_GET["placa"] : "";
